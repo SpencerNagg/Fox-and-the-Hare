@@ -1,4 +1,5 @@
 const image = document.getElementById('image')
+const imageDesktop = document.getElementById('desk-image')
 
 const context = document.getElementById('context');
 const disscussion = document.getElementById('disscussion');
@@ -31,9 +32,11 @@ function makeContent(data, encounter) {
   labelRight.textContent = encounterData['labelRight'];
 
   // Add image if there is one
-  if (encounterData['image'] != 'null') {
-    image.src = `images/${encounterData['image']}`
-  } else {image.style.visibility = "hidden"};
+  // if (encounterData['image'] != 'null') {
+  //   image.src = `images/${encounterData['image']}`
+  // } else {image.style.visibility = "hidden"};
+  image.src = `images/${encounterData['image']}`
+  imageDesktop.src = `images/${encounterData['image']}`
 
   button.addEventListener('click', () => {reaction.textContent = encounterData['reaction']})
 }
