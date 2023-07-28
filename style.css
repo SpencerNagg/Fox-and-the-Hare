@@ -114,11 +114,11 @@ img {
   justify-self: center;
 }
 
-/*.confirm_button:hover {
+.confirm_button:hover {
 	background-color:#e0f3fff2;
 	border-block: snow;
 	border-radius: 4.2px;
-}*/
+}
 
 .reaction {
 	grid-column: 1/4;
