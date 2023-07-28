@@ -1,0 +1,33 @@
+/*TODO: Make changes to the layout for larger screens*/
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #444;
+}
+
+/*Add space above top of button*/
+p {
+	padding-bottom: 30px;
+}
+
+.seperator {
+	width: 385px;
+}
+
+.title {
+	font-size: 45px;
+}
+
+.tagline {
+	font-size: 20px;
+	justify-self: center;
+}
+
+.play {
+	width: 270px;
+	height: 50px;
+	font-size: 20px;
+}
