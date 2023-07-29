@@ -1,6 +1,9 @@
 body {
-	background-image: url('../images/snowy_forest.jpg');
-	background-size: cover;
+	background-color: #074f57;
+/*	background: linear-gradient(to top, lightblue, brown);*/
+/*	background-image: url('../images/repeat_test.png');
+	background-size: cover;*/
+	background-attachment: fixed;
 }
 
 /*Add background to the sides on bigger screen sizes*/
