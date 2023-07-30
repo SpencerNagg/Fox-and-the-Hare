@@ -26,7 +26,7 @@ function makeContent(data, encounter) {
   encounterData = getByKey(data, encounter);
 
   let song = new Audio(`sound/${encounterData['song']}`)
-  // song.play();
+  song.play();
   context.textContent = encounterData['context'];
   disscussion.textContent = encounterData['dialogue'];
   labelLeft.textContent = encounterData['labelLeft'];
