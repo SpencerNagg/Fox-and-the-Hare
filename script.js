@@ -26,7 +26,7 @@ function makeContent(data, encounter) {
   encounterData = getByKey(data, encounter);
 
   let song = new Audio(`sound/${encounterData['song']}`)
-  // song.play();
+  
   context.textContent = encounterData['context'];
   disscussion.textContent = encounterData['dialogue'];
   labelLeft.textContent = encounterData['labelLeft'];
@@ -39,7 +39,7 @@ function makeContent(data, encounter) {
   image.src = `images/${encounterData['image']}`
   imageDesktop.src = `images/${encounterData['image']}`
 
-  button.addEventListener('click', () => {reaction.textContent = encounterData['reaction']})
+  button.addEventListener('click', () => {reaction.textContent = encounterData['reaction']; song.play();})
 }
 
 function getByKey(arr, key) {
