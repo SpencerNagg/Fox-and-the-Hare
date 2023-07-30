@@ -135,7 +135,7 @@ img {
 }
 
 .slider {
-  width: 1fr;
+  min-width: 170px;
   height: 30px;
   grid-column: 2;
   grid-row: 2;
@@ -147,6 +147,13 @@ img {
   width: 10vh;
   height: 5vh;
   justify-self: center;
+}
+
+@media (max-height: 650px) {
+	.confirm_button {
+		width: 18vh;
+		height: 6.5vh;
+	}
 }
 
 .confirm_button:hover {

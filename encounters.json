@@ -2,7 +2,7 @@
   {
     "bearRun": {
       "image": "bear.png",
-      "song": "hi.wav",
+      "song": "test.wav",
       "context":"The Bear said \"Why are so sad Hare?\" \n\"I had a wooden hut, and the Fox had an ice house. But then spring came, the fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"\n\n\"Hmm, well let's go chase her out!\"ad a wooden hut, and the Fox had an ice house. But then spring came, the fox's ice house melted, the water dried out, and she decided to move into my house and will not let me",
       "dialogue":"'this is the real dialogue",
       "labelLeft": "thLEFT",
