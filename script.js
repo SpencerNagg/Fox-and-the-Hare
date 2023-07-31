@@ -8,8 +8,14 @@ const labelRight = document.getElementById('label_right');
 const reaction = document.getElementById('reaction');
 const button = document.getElementById('confirm_button');
 
+const encounterOrder = ['bearRun', 'two', 'three'];
+let pageCounter = 0;
 
-populate('bearRun')
+// Run the first encounter
+if (pageCounter == 0) {
+  populate(encounterOrder[pageCounter]);
+  pageCounter += 1;
+}
 
 async function populate(encounter) {
   const requestURL = "encounters.json";
@@ -23,23 +29,33 @@ async function populate(encounter) {
 }
 
 function makeContent(data, encounter) {
-  encounterData = getByKey(data, encounter);
+  let encounterData = getByKey(data, encounter);
 
-  let song = new Audio(`sound/${encounterData['song']}`)
-
+  if (encounterData['song'] != 'null') {
+    let song = new Audio(`sound/${encounterData['song']}`)
+    song.play()
+  }
+  
   context.textContent = encounterData['context'];
   disscussion.textContent = encounterData['dialogue'];
   labelLeft.textContent = encounterData['labelLeft'];
   labelRight.textContent = encounterData['labelRight'];
 
-  // Add image if there is one
-  // if (encounterData['image'] != 'null') {
-  //   image.src = `images/${encounterData['image']}`
-  // } else {image.style.visibility = "hidden"};
   image.src = `images/${encounterData['image']}`
   imageDesktop.src = `images/${encounterData['image']}`
+  
+  let count = 0
 
-  button.addEventListener('click', () => {reaction.textContent = encounterData['reaction']; song.play();})
+  button.addEventListener('click', () => {
+    if (count == 0) {
+      reaction.textContent = encounterData['reaction'];
+    } else if (count != 0) {
+      populate(encounterOrder[pageCounter]);
+      count = 0;
+      pageCounter += 1;
+    }
+    count += 1;
+  })
 }
 
 function getByKey(arr, key) {

@@ -156,6 +156,13 @@ img {
 	}
 }
 
+@media (max-height: 400px) {
+	.confirm_button {
+		width: 33vh;
+		height: 16vh;
+	}
+}
+
 .confirm_button:hover {
 	background-color:#e0f3fff2;
 	border-block: snow;
