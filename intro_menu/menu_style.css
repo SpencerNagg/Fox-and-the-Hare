@@ -1,5 +1,16 @@
 /*TODO: Make changes to the layout for larger screens*/
 
+body {
+	background-color: black;
+	margin-top: 28px;
+}
+
+@media (max-width: 500px) {
+	body {
+		margin-top: 0;
+	}
+}
+
 .container {
 	display: flex;
 	flex-direction: column;
@@ -8,9 +19,22 @@
 	color: #444;
 }
 
+img {
+	border: inset;
+	border-color: #292a6c42;
+	border-width: 7px;
+}
+
+@media (max-width: 500px) {
+	img {
+		height: 60vh;
+	}
+}
+
 /*Add space above top of button*/
 p {
 	padding-bottom: 30px;
+	color: #dfdce3;
 }
 
 .seperator {
