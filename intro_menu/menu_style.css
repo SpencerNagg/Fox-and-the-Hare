@@ -1,5 +1,3 @@
-/*TODO: Make changes to the layout for larger screens*/
-
 body {
 	background-color: black;
 	margin-top: 28px;
@@ -20,7 +18,7 @@ body {
 }
 
 img {
-	border: inset;
+	border: solid;
 	border-color: #292a6c42;
 	border-width: 7px;
 }

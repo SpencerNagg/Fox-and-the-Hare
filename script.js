@@ -6,12 +6,16 @@ const disscussion = document.getElementById('disscussion');
 const labelLeft = document.getElementById('label_left');
 const labelRight = document.getElementById('label_right');
 const reaction = document.getElementById('reaction');
-const button = document.getElementById('confirm_button');
+
+const buttonContainer = document.getElementById('buttonContainer');
+
+
+
 
 const encounterOrder = ['bearRun', 'two', 'three'];
 let pageCounter = 0;
 
-// Run the first encounter
+// Run the first encounter (for testing purposes?)
 if (pageCounter == 0) {
   populate(encounterOrder[pageCounter]);
   pageCounter += 1;
@@ -31,10 +35,8 @@ async function populate(encounter) {
 function makeContent(data, encounter) {
   let encounterData = getByKey(data, encounter);
 
-  if (encounterData['song'] != 'null') {
-    let song = new Audio(`sound/${encounterData['song']}`)
-    song.play()
-  }
+  let song = new Audio(`sound/${encounterData['song']}`);
+  song.play();
   
   context.textContent = encounterData['context'];
   disscussion.textContent = encounterData['dialogue'];
@@ -43,18 +45,37 @@ function makeContent(data, encounter) {
 
   image.src = `images/${encounterData['image']}`
   imageDesktop.src = `images/${encounterData['image']}`
-  
-  let count = 0
 
-  button.addEventListener('click', () => {
-    if (count == 0) {
-      reaction.textContent = encounterData['reaction'];
-    } else if (count != 0) {
-      populate(encounterOrder[pageCounter]);
-      count = 0;
-      pageCounter += 1;
-    }
-    count += 1;
+
+  // -------- Button workings----------
+  // Make the buttons but don't add them to the document
+  const continueButton = document.createElement("button");
+  continueButton.textContent = "Continue";
+  continueButton.className = "button";
+
+  const confirmButton = document.createElement("button");
+  confirmButton.textContent = "Confirm";
+  confirmButton.className = "button";
+
+  // Add the confirm button
+  buttonContainer.append(confirmButton);
+  confirmButton.addEventListener('click', () => {
+    reaction.textContent = encounterData['reaction'];
+    confirmButton.remove();
+
+    // Move the button container under the reaction text
+    // Add in the continue button
+    buttonContainer.style.gridRow = '5';
+    buttonContainer.append(continueButton);
+  })
+
+  continueButton.addEventListener('click', () => {
+    song.pause();
+    continueButton.remove();
+    buttonContainer.style.gridRow = null;
+    reaction.textContent = '';
+    populate(encounterOrder[pageCounter]);
+    pageCounter += 1;
   })
 }
 

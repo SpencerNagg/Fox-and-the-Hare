@@ -14,7 +14,7 @@
   {
     "two": {
       "image": "null",
-      "song": "null",
+      "song": "abitsad.wav",
       "context":"second encounter",
       "disscussion":"second encounter",
       "labelLeft": "second encounter-left",
@@ -25,7 +25,7 @@
   {
     "three": {
       "image": "null",
-      "song": "null",
+      "song": "3over4.wav",
       "context":"third!!!!!",
       "disscussion":"'third!!!!!",
       "labelLeft": "third!!!!!",
