@@ -104,7 +104,7 @@ img {
 	border-color: #0070ff33;
 	display: inline-grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: min-content min-content min-content min-content;
+	grid-template-rows: repeat(min-content, auto);
 	border-color: #0064ff54;
 }
 
@@ -141,12 +141,21 @@ img {
   grid-row: 2;
 }
 
-.button, .buttonContainer {
+.buttonContainer {
 	grid-column: 2;
   grid-row: 3;
+  justify-self: center;
+}
+
+.button {
   width: 10vh;
   height: 5vh;
-  justify-self: center;
+}
+
+
+
+.buttonContainer {
+	padding: 10px;
 }
 
 @media (max-height: 650px) {

@@ -1,36 +1,35 @@
 [ 
   {
-    "bearRun": {
-      "image": "bear.png",
-      "song": "test.wav",
-      "context":"The Bear said \"Why are so sad Hare?\" \n\"I had a wooden hut, and the Fox had an ice house. But then spring came, the fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"\n\n\"Hmm, well let's go chase her out!\"ad a wooden hut, and the Fox had an ice house. But then spring came, the fox's ice house melted, the water dried out, and she decided to move into my house and will not let me",
-      "dialogue":"'this is the real dialogue",
-      "labelLeft": "thLEFT",
-      "labelRight": "tlabel-right",
-      "reaction": "this is the actual reaction WHOOOOhis is the actual reaction WHO",
-      "new": "newthinghsssssssere"
+    "wolf": {
+      "image": "wolf-min.png",
+      "song": "abitsad.ogg",
+      "context":"\"Hi there, Hare, why so sad? Why do you cry?\"\n\"Oh, how can I not be sad and not cry: I had a wooden hut and the Fox had an ice house. But then spring came, the fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"\n\"Oh just wait a minute,\" said the Wolf,\"I won't be myself if I can't chase the Fox out of your house!\"\n\"I doubt it, dear Wolf, she is holding on to my house fast.\"",
+      "dialogue":"How to phrase your response?",
+      "labelLeft": "Harsh",
+      "labelRight": "Gentle",
+      "reaction": "The Hare said, \"Alright then let's go!\""
       }
   },
   {
-    "two": {
-      "image": "null",
-      "song": "abitsad.wav",
-      "context":"second encounter",
-      "disscussion":"second encounter",
-      "labelLeft": "second encounter-left",
-      "labelRight": "second encounter-right",
-      "reaction": "second encounter"
+    "bear": {
+      "image": "bear-min.png",
+      "song": "test1.ogg",
+      "context":"The Bear said \"Why are so sad Hare?\" \n\"I had a wooden hut, and the Fox had an ice house. But then spring came, the fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"\n\n\"Hmm, well let's go chase her out! I won't be myself if I can't chase the Fox out of your little house!\"\n\n\"No, dear Bear, I doubt it, she is holding on to my house fast. The Wolf tried to driver her out and couldn't, and so you too will fail!\"",
+      "dialogue":"How should you tell the bear he's gonna fail?",
+      "labelLeft": "Harsh",
+      "labelRight": "Gentle",
+      "reaction": "The bear said, \"A fox has never beaten a bear!\""
       }
   },
   {
-    "three": {
-      "image": "null",
-      "song": "3over4.wav",
-      "context":"third!!!!!",
-      "disscussion":"'third!!!!!",
-      "labelLeft": "third!!!!!",
-      "labelRight": "third!!!!!",
-      "reaction": "third!!!!!"
+    "bull": {
+      "image": "bull-min.png",
+      "song": "3over4.ogg",
+      "context":"Then the Bull comes to the Hare \"Hi, Hare, why so sad? What are you crying about?\"\n\n\"The fox took my house.\"\n\n\"Oh, let's go chase her out\"\n\n\"No, dear Bull, we will not chase her out - she is holding on to my hosue fast. The Wolf tried and failed, the Bear tried and failed, and you will try and fail!\"\n\n\"I won't be myself if I cannot chase the Fox out of your house!\"",
+      "dialogue":"How enthusiastically should you follow the bull?",
+      "labelLeft": "Sloppily",
+      "labelRight": "With hope!",
+      "reaction": "Yeah let's go!"
       }
   }
 ]

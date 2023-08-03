@@ -12,7 +12,7 @@ const buttonContainer = document.getElementById('buttonContainer');
 
 
 
-const encounterOrder = ['bearRun', 'two', 'three'];
+const encounterOrder = ['wolf', 'bear', 'bull'];
 let pageCounter = 0;
 
 // Run the first encounter (for testing purposes?)
