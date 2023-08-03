@@ -75,6 +75,10 @@ function makeContent(data, encounter) {
     buttonContainer.style.gridRow = null;
     reaction.textContent = '';
     populate(encounterOrder[pageCounter]);
+
+    // Move back to top of page
+    scroll(0, 0)
+    
     pageCounter += 1;
   })
 }
