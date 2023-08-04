@@ -1,5 +1,27 @@
 [ 
   {
+    "onceUpon": {
+      "image": "palace-min.png",
+      "song": "null",
+      "context":"Once upon a time there lived a Fox and a Hare. \n The Fox had a house made of ice, and the Hare had a wooden hut.\nThe fox sat at her icy window and mocked the Hare:\n\"Silly Hare built himself such an ugly little hut! Nothing like my house, so beautiful, bright and clean! It's not just an ice house - it's a Crystal Palace!\"",
+      "dialogue":"",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
+      }
+  },
+    {
+    "melt": {
+      "image": "evicted-min.png",
+      "song": "null",
+      "context":"Then came spring. The Fox's palace melted.\n So the Fox decided to take the Hare's hut. One day, when the Hare was out of his house, the Fox came and took his home and did not let him back inside.",
+      "dialogue":"",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
+      }
+  },
+  {
     "wolf": {
       "image": "wolf-min.png",
       "song": "abitsad.ogg",
@@ -30,6 +52,61 @@
       "labelLeft": "Sloppily",
       "labelRight": "With hope!",
       "reaction": "Yeah let's go!"
+      }
+  },
+      {
+    "sorrow": {
+      "image": "crying-min.png",
+      "song": "null",
+      "context":"And the Hare was left crying in the field ...",
+      "dialogue":"",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
+      }
+  },
+      {
+    "rooster": {
+      "image": "rooster-min.png",
+      "song": "null",
+      "context":"Then the Rooster walked by and saw the Hare and said: \n\"Hey, Hare, how are you? What's grieving you? Why are you crying?\"\n\"Oh, how can I not be sad and not cry if I am chased out of my own home?\nI had a wooden hut and the Fox had an ice house. But then spring came, the Fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"",
+      "dialogue":"",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
+      }
+  },
+      {
+    "march": {
+      "image": "ready-min.png",
+      "song": "null",
+      "context":"\"Hold on! Let's go and chase her out!\" said the Rooster.\n\"It's unlikely, dear Rooster - she is in my house nice and tight. The Wolf tried and failed, the Bear tried and failed, the Bull tried and failed, and you will fail also!\"\n\"We'll try, let's try before we cry.\" said the Rooster.\n\nSo they went off to chase out the Fox and the Rooster began to sing:\n\"Here go I,\nI am ready to fight,\nI have a sword.\nCome out have a word,\nCome out, Fox,\nCome out and see,\nOr I'll come for thee!\"",
+      "dialogue":"",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
+      }
+  },
+      {
+    "fight": {
+      "image": "fox_run-min.png",
+      "song": "null",
+      "context":"When the Fox heard this threat she got scared and said, as sweetly as she could:\n\"Wait, dearest gold-feathered, silky-bearded Rooster! Let me at least get my coat!\"\nBut the Rooster was not tricked and shouted bravely:\n\"Cock-a-doodle-doo, I shall slice and dice you!\"",
+      "dialogue":"",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
+      }
+  },
+        {
+    "end": {
+      "image": "ever_after-min.png",
+      "song": "null",
+      "context":"The Fox got scared and ran off.\n\nFrom then on, the Rooster and the Hare lived together in their cozy wooden hut.",
+      "dialogue":"How was the game?",
+      "labelLeft": "Boring",
+      "labelRight": "Good",
+      "reaction": "The End"
       }
   }
 ]

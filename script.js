@@ -12,7 +12,16 @@ const buttonContainer = document.getElementById('buttonContainer');
 
 
 
-const encounterOrder = ['wolf', 'bear', 'bull'];
+const encounterOrder = [
+  // Opening
+  'onceUpon', 'melt',
+
+  // Main section
+  'wolf', 'bear', 'bull',
+
+  // Closing act
+  'sorrow', 'rooster', 'march', 'fight', 'end'
+  ];
 let pageCounter = 0;
 
 // Run the first encounter (for testing purposes?)
@@ -35,9 +44,16 @@ async function populate(encounter) {
 function makeContent(data, encounter) {
   let encounterData = getByKey(data, encounter);
 
+  // Check if the encounter has a image
+  // let hasImage;
+  // if (encounterData['image'] != 'null') {
+  //   hasImage = true;
+  // }
+  
   let song = new Audio(`sound/${encounterData['song']}`);
   song.play();
-  
+
+  // Display text content + image
   context.textContent = encounterData['context'];
   disscussion.textContent = encounterData['dialogue'];
   labelLeft.textContent = encounterData['labelLeft'];
@@ -46,9 +62,7 @@ function makeContent(data, encounter) {
   image.src = `images/${encounterData['image']}`
   imageDesktop.src = `images/${encounterData['image']}`
 
-
   // -------- Button workings----------
-  // Make the buttons but don't add them to the document
   const continueButton = document.createElement("button");
   continueButton.textContent = "Continue";
   continueButton.className = "button";
@@ -67,10 +81,14 @@ function makeContent(data, encounter) {
     // Add in the continue button
     buttonContainer.style.gridRow = '5';
     buttonContainer.append(continueButton);
+
+    // Scroll to the bottom
+    scrollTo(0, document.body.scrollHeight);
   })
 
   continueButton.addEventListener('click', () => {
     song.pause();
+
     continueButton.remove();
     buttonContainer.style.gridRow = null;
     reaction.textContent = '';
