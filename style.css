@@ -52,7 +52,7 @@ body {
 @media (min-width: 1088px) {
 	.image-container {
 		display: inherit;
-		background-color: lightgrey;
+		background-color: #e6e6e6;
 	}
 }
 
@@ -64,7 +64,7 @@ body {
 }
 
 .grid-item-1 {
-	background-color: lightgrey;
+	background-color: #e6e6e6;
 	border: solid 1.1px;
 	border-color: #7698b7;
 	padding-top: 4px;
@@ -97,7 +97,7 @@ img {
 
 /*-----------------------*/
 .grid-item-2 {
-	background-color: lightgrey;
+	background-color: #e6e6e6;
 	border: solid 2px;
 	border-color: #0070ff33;
 	display: inline-grid;
