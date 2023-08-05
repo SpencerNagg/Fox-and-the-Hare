@@ -1,3 +1,5 @@
+
+const body = document.body
 const image = document.getElementById('image')
 const imageDesktop = document.getElementById('desk-image')
 
@@ -10,8 +12,6 @@ const reaction = document.getElementById('reaction');
 const buttonContainer = document.getElementById('buttonContainer');
 
 
-
-
 const encounterOrder = [
   // Opening
   'onceUpon', 'melt',
@@ -20,7 +20,7 @@ const encounterOrder = [
   'wolf', 'bear', 'bull',
 
   // Closing act
-  'sorrow', 'rooster', 'march', 'fight', 'end'
+  'sorrow', 'rooster', 'march', 'fight', 'end', 'credits'
   ];
 let pageCounter = 0;
 
@@ -43,17 +43,12 @@ async function populate(encounter) {
 
 function makeContent(data, encounter) {
   let encounterData = getByKey(data, encounter);
-
-  // Check if the encounter has a image
-  // let hasImage;
-  // if (encounterData['image'] != 'null') {
-  //   hasImage = true;
-  // }
   
   let song = new Audio(`sound/${encounterData['song']}`);
   song.play();
 
-  // Display text content + image
+  // Fill in content
+  body.style.backgroundColor = encounterData['background'];
   context.textContent = encounterData['context'];
   disscussion.textContent = encounterData['dialogue'];
   labelLeft.textContent = encounterData['labelLeft'];

@@ -1,6 +1,7 @@
 [ 
   {
     "onceUpon": {
+      "background": "white",
       "image": "palace-min.png",
       "song": "null",
       "context":"Once upon a time there lived a Fox and a Hare. \n The Fox had a house made of ice, and the Hare had a wooden hut.\nThe fox sat at her icy window and mocked the Hare:\n\"Silly Hare built himself such an ugly little hut! Nothing like my house, so beautiful, bright and clean! It's not just an ice house - it's a Crystal Palace!\"",
@@ -12,6 +13,7 @@
   },
     {
     "melt": {
+      "background": "#8000424a",
       "image": "evicted-min.png",
       "song": "null",
       "context":"Then came spring. The Fox's palace melted.\n So the Fox decided to take the Hare's hut. One day, when the Hare was out of his house, the Fox came and took his home and did not let him back inside.",
@@ -23,6 +25,7 @@
   },
   {
     "wolf": {
+      "background": "rgba(83, 56, 44, 0.7)",
       "image": "wolf-min.png",
       "song": "abitsad.ogg",
       "context":"\"Hi there, Hare, why so sad? Why do you cry?\"\n\"Oh, how can I not be sad and not cry: I had a wooden hut and the Fox had an ice house. But then spring came, the fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"\n\"Oh just wait a minute,\" said the Wolf,\"I won't be myself if I can't chase the Fox out of your house!\"\n\"I doubt it, dear Wolf, she is holding on to my house fast.\"",
@@ -34,6 +37,7 @@
   },
   {
     "bear": {
+      "background": "rgba(2, 77, 24, 0.57)",
       "image": "bear-min.png",
       "song": "test1.ogg",
       "context":"The Bear said \"Why are so sad Hare?\" \n\"I had a wooden hut, and the Fox had an ice house. But then spring came, the fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"\n\n\"Hmm, well let's go chase her out! I won't be myself if I can't chase the Fox out of your little house!\"\n\n\"No, dear Bear, I doubt it, she is holding on to my house fast. The Wolf tried to driver her out and couldn't, and so you too will fail!\"",
@@ -45,6 +49,7 @@
   },
   {
     "bull": {
+      "background": "rgba(38, 38, 79, 0.83)",
       "image": "bull-min.png",
       "song": "3over4.ogg",
       "context":"Then the Bull comes to the Hare \"Hi, Hare, why so sad? What are you crying about?\"\n\n\"The fox took my house.\"\n\n\"Oh, let's go chase her out\"\n\n\"No, dear Bull, we will not chase her out - she is holding on to my hosue fast. The Wolf tried and failed, the Bear tried and failed, and you will try and fail!\"\n\n\"I won't be myself if I cannot chase the Fox out of your house!\"",
@@ -56,6 +61,7 @@
   },
       {
     "sorrow": {
+      "background": "#060106d9",
       "image": "crying-min.png",
       "song": "null",
       "context":"And the Hare was left crying in the field ...",
@@ -67,6 +73,7 @@
   },
       {
     "rooster": {
+      "background": "rgba(168, 94, 50, 0.51)",
       "image": "rooster-min.png",
       "song": "null",
       "context":"Then the Rooster walked by and saw the Hare and said: \n\"Hey, Hare, how are you? What's grieving you? Why are you crying?\"\n\"Oh, how can I not be sad and not cry if I am chased out of my own home?\nI had a wooden hut and the Fox had an ice house. But then spring came, the Fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"",
@@ -78,6 +85,7 @@
   },
       {
     "march": {
+      "background": "rgba(255, 106, 17, 0.26)",
       "image": "ready-min.png",
       "song": "null",
       "context":"\"Hold on! Let's go and chase her out!\" said the Rooster.\n\"It's unlikely, dear Rooster - she is in my house nice and tight. The Wolf tried and failed, the Bear tried and failed, the Bull tried and failed, and you will fail also!\"\n\"We'll try, let's try before we cry.\" said the Rooster.\n\nSo they went off to chase out the Fox and the Rooster began to sing:\n\"Here go I,\nI am ready to fight,\nI have a sword.\nCome out have a word,\nCome out, Fox,\nCome out and see,\nOr I'll come for thee!\"",
@@ -89,6 +97,7 @@
   },
       {
     "fight": {
+      "background": "rgba(79, 66, 14, 0.27)",
       "image": "fox_run-min.png",
       "song": "null",
       "context":"When the Fox heard this threat she got scared and said, as sweetly as she could:\n\"Wait, dearest gold-feathered, silky-bearded Rooster! Let me at least get my coat!\"\nBut the Rooster was not tricked and shouted bravely:\n\"Cock-a-doodle-doo, I shall slice and dice you!\"",
@@ -100,6 +109,7 @@
   },
         {
     "end": {
+      "background": "rgba(94, 39, 18, 0.84)",
       "image": "ever_after-min.png",
       "song": "null",
       "context":"The Fox got scared and ran off.\n\nFrom then on, the Rooster and the Hare lived together in their cozy wooden hut.",
@@ -107,6 +117,18 @@
       "labelLeft": "Boring",
       "labelRight": "Good",
       "reaction": "The End"
+      }
+  },
+        {
+    "credits": {
+      "background": "rgba(94, 39, 18, 0.84)",
+      "image": "null",
+      "song": "null",
+      "context":"Original folktale retelling by Vladamir Dal\nIllustrations by Francesca Yarbusova\nOriginal animation directed by Yuri Norstein\nGame by MY NAME",
+      "dialogue":"",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
       }
   }
 ]
