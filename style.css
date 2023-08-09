@@ -1,12 +1,12 @@
 body {
-/*	background-color: #074f57;*/
-/*	background: linear-gradient(to top, lightblue, brown);*/
-/*	background-image: url('../images/snowy_forest_medium.jpg');
-	background-size: cover;*/
 	background-attachment: fixed;
+	font-family: sans;
+	line-height:1.6;
+	font-size: 20px;
+	color: #444;
 }
 
-/*Add background to the sides on bigger screen sizes*/
+/*Add more margin to the sides on bigger screen sizes*/
 @media (min-width: 800px) {
 	body {
 		margin-right: 30px;
@@ -22,9 +22,9 @@ body {
 	}
 }
 
+/*---------------------------*/
 /*Main content*/
 .grid-container {
-/*	background: linear-gradient(to top, #FDFDFD00, #02110A66);*/
 	display: grid;
 	grid-template-columns: 1.7fr;
 	/* Adding non-auto heights to rows interferes with longer text lengths */
@@ -57,9 +57,6 @@ body {
 }
 
 .grid-item-1, .disscussion, .reaction, .label_left, .label_right{
-	line-height:1.6;
-	font-size:18px;
-	color: #444;
 	padding:0 10px;
 }
 
@@ -144,7 +141,7 @@ img {
 
 .buttonContainer {
 	grid-column: 2;
-  grid-row: 3;
+  grid-row: 6;
   justify-self: center;
 }
 
@@ -152,8 +149,6 @@ img {
   width: 10vh;
   height: 5vh;
 }
-
-
 
 .buttonContainer {
 	padding: 10px;
@@ -171,12 +166,6 @@ img {
 		width: 33vh;
 		height: 16vh;
 	}
-}
-
-.button:hover {
-	background-color:#e0f3fff2;
-	border-block: snow;
-	border-radius: 4.2px;
 }
 
 .reaction {

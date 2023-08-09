@@ -45,6 +45,7 @@ function makeContent(data, encounter) {
   let encounterData = getByKey(data, encounter);
   
   let song = new Audio(`sound/${encounterData['song']}`);
+  song.loop = true;
   song.play();
 
   // Fill in content
@@ -53,6 +54,8 @@ function makeContent(data, encounter) {
   disscussion.textContent = encounterData['dialogue'];
   labelLeft.textContent = encounterData['labelLeft'];
   labelRight.textContent = encounterData['labelRight'];
+  reaction.textContent = encounterData['reaction'];
+  reaction.style.visibility = 'hidden';
 
   image.src = `images/${encounterData['image']}`
   imageDesktop.src = `images/${encounterData['image']}`
@@ -69,12 +72,12 @@ function makeContent(data, encounter) {
   // Add the confirm button
   buttonContainer.append(confirmButton);
   confirmButton.addEventListener('click', () => {
-    reaction.textContent = encounterData['reaction'];
+    reaction.style.visibility = 'inherit';
     confirmButton.remove();
 
     // Move the button container under the reaction text
     // Add in the continue button
-    buttonContainer.style.gridRow = '5';
+    
     buttonContainer.append(continueButton);
 
     // Scroll to the bottom

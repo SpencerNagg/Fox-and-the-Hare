@@ -3,12 +3,12 @@
     "onceUpon": {
       "background": "white",
       "image": "palace.webp",
-      "song": "null",
+      "song": "startwinter.mp3",
       "context":"Once upon a time there lived a Fox and a Hare. \n The Fox had a house made of ice, and the Hare had a wooden hut.\nThe fox sat at her icy window and mocked the Hare:\n\"Silly Hare built himself such an ugly little hut! Nothing like my house, so beautiful, bright and clean! It's not just an ice house - it's a Crystal Palace!\"",
       "dialogue":"",
       "labelLeft": "",
       "labelRight": "",
-      "reaction": ""
+      "reaction": "test reaction hi there test test test"
       }
   },
     {
@@ -20,7 +20,7 @@
       "dialogue":"",
       "labelLeft": "",
       "labelRight": "",
-      "reaction": ""
+      "reaction": "test reaction hi there test test test"
       }
   },
   {
@@ -37,9 +37,9 @@
   },
   {
     "bear": {
-      "background": "rgba(2, 77, 24, 0.57)",
+      "background": "rgba(59, 94, 69, 0.93)",
       "image": "bear.webp",
-      "song": "test1.ogg",
+      "song": "bears_song.mp3",
       "context":"The Bear said \"Why are so sad Hare?\" \n\"I had a wooden hut, and the Fox had an ice house. But then spring came, the fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"\n\n\"Hmm, well let's go chase her out! I won't be myself if I can't chase the Fox out of your little house!\"\n\n\"No, dear Bear, I doubt it, she is holding on to my house fast. The Wolf tried to driver her out and couldn't, and so you too will fail!\"",
       "dialogue":"How should you tell the bear he's gonna fail?",
       "labelLeft": "Harsh",
@@ -63,7 +63,7 @@
     "sorrow": {
       "background": "rgba(6, 1, 6, 0.85)",
       "image": "crying.webp",
-      "song": "null",
+      "song": "lonely_hare.mp3",
       "context":"And the Hare was left crying in the field ...",
       "dialogue":"",
       "labelLeft": "",
@@ -99,7 +99,7 @@
     "fight": {
       "background": "rgba(79, 66, 14, 0.27)",
       "image": "fox_run.webp",
-      "song": "null",
+      "song": "foxharefight.mp3",
       "context":"When the Fox heard this threat she got scared and said, as sweetly as she could:\n\"Wait, dearest gold-feathered, silky-bearded Rooster! Let me at least get my coat!\"\nBut the Rooster was not tricked and shouted bravely:\n\"Cock-a-doodle-doo, I shall slice and dice you!\"",
       "dialogue":"",
       "labelLeft": "",
