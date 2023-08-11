@@ -39,7 +39,7 @@
     "bear": {
       "background": "rgba(59, 94, 69, 0.93)",
       "image": "bear.webp",
-      "song": "bears_song.mp3",
+      "song": "bears_song.ogg",
       "context":"The Bear said \"Why are so sad Hare?\" \n\"I had a wooden hut, and the Fox had an ice house. But then spring came, the fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"\n\n\"Hmm, well let's go chase her out! I won't be myself if I can't chase the Fox out of your little house!\"\n\n\"No, dear Bear, I doubt it, she is holding on to my house fast. The Wolf tried to driver her out and couldn't, and so you too will fail!\"",
       "dialogue":"How should you tell the bear he's gonna fail?",
       "labelLeft": "Harsh",
@@ -63,7 +63,7 @@
     "sorrow": {
       "background": "rgba(6, 1, 6, 0.85)",
       "image": "crying.webp",
-      "song": "lonely_hare.mp3",
+      "song": "lonely_hare.ogg",
       "context":"And the Hare was left crying in the field ...",
       "dialogue":"",
       "labelLeft": "",
@@ -87,7 +87,7 @@
     "march": {
       "background": "rgba(255, 106, 17, 0.26)",
       "image": "ready.webp",
-      "song": "null",
+      "song": "sfx/tree_fall.ogg",
       "context":"\"Hold on! Let's go and chase her out!\" said the Rooster.\n\"It's unlikely, dear Rooster - she is in my house nice and tight. The Wolf tried and failed, the Bear tried and failed, the Bull tried and failed, and you will fail also!\"\n\"We'll try, let's try before we cry.\" said the Rooster.\n\nSo they went off to chase out the Fox and the Rooster began to sing:\n\"Here go I,\nI am ready to fight,\nI have a sword.\nCome out have a word,\nCome out, Fox,\nCome out and see,\nOr I'll come for thee!\"",
       "dialogue":"",
       "labelLeft": "",

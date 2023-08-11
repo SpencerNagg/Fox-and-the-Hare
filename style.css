@@ -63,7 +63,7 @@ body {
 .grid-item-1 {
 	background-color: #e6e6e6;
 	border: solid 1.1px;
-	border-color: #7698b7;
+	border-color: rgba(79, 66, 14, 0.42);
 	padding-top: 4px;
 
 	display: inline-grid;
@@ -84,7 +84,6 @@ img {
 }
 
 
-
 .meter_label {
 	writing-mode: horizontal-tb;
 	grid-column: 1;
@@ -95,12 +94,12 @@ img {
 /*-----------------------*/
 .grid-item-2 {
 	background-color: #e6e6e6;
-	border: solid 2px;
+	border: solid 1.2px;
 	border-color: #0070ff33;
 	display: inline-grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(min-content, auto);
-	border-color: #0064ff36;
+	border-color: rgba(79, 66, 14, 0.42);
 	box-shadow: 0 .1px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
 }
 

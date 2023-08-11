@@ -1,5 +1,6 @@
-
+/*Looking around?*/
 const body = document.body
+const bottomSection = document.getElementById('lowerContainer')
 const image = document.getElementById('image')
 const imageDesktop = document.getElementById('desk-image')
 
@@ -10,8 +11,9 @@ const labelRight = document.getElementById('label_right');
 const reaction = document.getElementById('reaction');
 
 const buttonContainer = document.getElementById('buttonContainer');
+const slider = document.getElementById('slider');
 
-
+// Globals
 const encounterOrder = [
   // Opening
   'onceUpon', 'melt',
@@ -22,7 +24,10 @@ const encounterOrder = [
   // Closing act
   'sorrow', 'rooster', 'march', 'fight', 'end', 'credits'
   ];
+
 let pageCounter = 0;
+
+let testGlobal = 0;
 
 // Run the first encounter (for testing purposes?)
 if (pageCounter == 0) {
@@ -42,6 +47,7 @@ async function populate(encounter) {
 }
 
 function makeContent(data, encounter) {
+  console.log('testGlobal:', testGlobal);
   let encounterData = getByKey(data, encounter);
   
   let song = new Audio(`sound/${encounterData['song']}`);
@@ -50,6 +56,7 @@ function makeContent(data, encounter) {
 
   // Fill in content
   body.style.backgroundColor = encounterData['background'];
+
   context.textContent = encounterData['context'];
   disscussion.textContent = encounterData['dialogue'];
   labelLeft.textContent = encounterData['labelLeft'];
@@ -72,12 +79,12 @@ function makeContent(data, encounter) {
   // Add the confirm button
   buttonContainer.append(confirmButton);
   confirmButton.addEventListener('click', () => {
-    reaction.style.visibility = 'inherit';
-    confirmButton.remove();
 
-    // Move the button container under the reaction text
-    // Add in the continue button
-    
+    testGlobal += Number(slider.value);
+    reaction.style.visibility = 'inherit';
+
+    // Remove the confirm button and add in the continue button
+    confirmButton.remove();
     buttonContainer.append(continueButton);
 
     // Scroll to the bottom
@@ -87,9 +94,13 @@ function makeContent(data, encounter) {
   continueButton.addEventListener('click', () => {
     song.pause();
 
+    // Reset the slider to the middle
+    slider.value = "0";
+
     continueButton.remove();
-    buttonContainer.style.gridRow = null;
     reaction.textContent = '';
+
+    // Load the next encounter
     populate(encounterOrder[pageCounter]);
 
     // Move back to top of page
