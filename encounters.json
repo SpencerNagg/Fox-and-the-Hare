@@ -1,18 +1,20 @@
 [ 
   {
     "onceUpon": {
+      "layout": "button",
       "background": "white",
       "image": "palace.webp",
       "song": "startwinter.mp3",
       "context":"Once upon a time there lived a Fox and a Hare. \n The Fox had a house made of ice, and the Hare had a wooden hut.\nThe fox sat at her icy window and mocked the Hare:\n\"Silly Hare built himself such an ugly little hut! Nothing like my house, so beautiful, bright and clean! It's not just an ice house - it's a Crystal Palace!\"",
-      "dialogue":"",
-      "labelLeft": "",
-      "labelRight": "",
-      "reaction": "test reaction hi there test test test"
+      "dialogue":"this is the fialuge soutouhfouhfuh",
+      "labelLeft": "labelleft",
+      "labelRight": "labelRight",
+      "reaction": ["number1", "2222222222222"]
       }
   },
     {
     "melt": {
+      "layout": "scrollbar",
       "background": "rgba(79, 66, 14, 0.27)",
       "image": "evicted.webp",
       "song": "null",
@@ -20,11 +22,12 @@
       "dialogue":"",
       "labelLeft": "",
       "labelRight": "",
-      "reaction": "test reaction hi there test test test"
+      "reaction": ["test reaction hi there test test test", "test reaction hi there test test test"]
       }
-  },
-  {
+  }
+ , {
     "wolf": {
+      "layout": "button",
       "background": "rgba(83, 56, 44, 0.7)",
       "image": "wolf.webp",
       "song": "abitsad.ogg",
@@ -32,23 +35,25 @@
       "dialogue":"How to phrase your response?",
       "labelLeft": "Harsh",
       "labelRight": "Gentle",
-      "reaction": "The Hare said, \"Alright then let's go!\""
+      "reaction": ["The Hare said, \"Alright then let's go!\"", "thingy said, \"Alright then let's go!\""]
       }
   },
   {
     "bear": {
+      "layout": "button",
       "background": "rgba(59, 94, 69, 0.93)",
       "image": "bear.webp",
       "song": "bears_song.ogg",
       "context":"The Bear said \"Why are so sad Hare?\" \n\"I had a wooden hut, and the Fox had an ice house. But then spring came, the fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"\n\n\"Hmm, well let's go chase her out! I won't be myself if I can't chase the Fox out of your little house!\"\n\n\"No, dear Bear, I doubt it, she is holding on to my house fast. The Wolf tried to driver her out and couldn't, and so you too will fail!\"",
       "dialogue":"How should you tell the bear he's gonna fail?",
-      "labelLeft": "Harsh",
-      "labelRight": "Gentle",
-      "reaction": "The bear said, \"A fox has never beaten a bear!\""
+      "labelLeft": "leftside",
+      "labelRight": "rightside",
+      "reaction": ["The bear said, \"A fox has never beaten a bear!\"", "The bear said, \"A fox has never beaten a bear!\""]
       }
   },
   {
     "bull": {
+      "layout": "scrollbar",
       "background": "rgba(38, 38, 79, 0.83)",
       "image": "bull.webp",
       "song": "3over4.ogg",
@@ -56,11 +61,12 @@
       "dialogue":"How enthusiastically should you follow the bull?",
       "labelLeft": "Sloppily",
       "labelRight": "With hope!",
-      "reaction": "Yeah let's go!"
+      "reaction": ["Yeah let's go!", "Yeah let's go!"]
       }
   },
       {
     "sorrow": {
+      "layout": "scrollbar",
       "background": "rgba(6, 1, 6, 0.85)",
       "image": "crying.webp",
       "song": "lonely_hare.ogg",
@@ -73,9 +79,10 @@
   },
       {
     "rooster": {
+      "layout": "scrollbar",
       "background": "rgba(168, 94, 50, 0.51)",
       "image": "rooster.webp",
-      "song": "null",
+      "song": "rooster.ogg",
       "context":"Then the Rooster walked by and saw the Hare and said: \n\"Hey, Hare, how are you? What's grieving you? Why are you crying?\"\n\"Oh, how can I not be sad and not cry if I am chased out of my own home?\nI had a wooden hut and the Fox had an ice house. But then spring came, the Fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"",
       "dialogue":"",
       "labelLeft": "",
@@ -85,6 +92,7 @@
   },
       {
     "march": {
+      "layout": "scrollbar",
       "background": "rgba(255, 106, 17, 0.26)",
       "image": "ready.webp",
       "song": "sfx/tree_fall.ogg",
@@ -97,6 +105,7 @@
   },
       {
     "fight": {
+      "layout": "scrollbar",
       "background": "rgba(79, 66, 14, 0.27)",
       "image": "fox_run.webp",
       "song": "foxharefight.mp3",
@@ -107,8 +116,82 @@
       "reaction": ""
       }
   },
+
+
+          {
+    "3encounter1": {
+      "layout": "scrollbar",
+      "background": "yellow",
+      "image": "",
+      "song": "",
+      "context":"1/3",
+      "dialogue":"",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
+      }
+  },
+          {
+    "3encounter2": {
+      "layout": "scrollbar",
+      "background": "green",
+      "image": "",
+      "song": "",
+      "context":"2/3",
+      "dialogue":"",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
+      }
+  },
+          {
+    "3encounter3": {
+      "layout": "scrollbar",
+      "background": "red",
+      "image": "",
+      "song": "",
+      "context":"3/3",
+      "dialogue":"",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
+      }
+  },
+
+
+
+        {
+    "ending1": {
+      "layout": "scrollbar",
+      "background": "rgba(79, 66, 14, 0.27)",
+      "image": "palace.webp",
+      "song": "",
+      "context":"First ending",
+      "dialogue":"",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
+      }
+  },
+        {
+    "ending2": {
+      "layout": "scrollbar",
+      "background": "rgba(79, 66, 14, 0.27)",
+      "image": "wolf.webp",
+      "song": "",
+      "context":"Second ending",
+      "dialogue":"",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
+      }
+  },
+
+
+
         {
     "end": {
+      "layout": "scrollbar",
       "background": "rgba(94, 39, 18, 0.84)",
       "image": "ever_after.webp",
       "song": "null",
@@ -116,11 +199,12 @@
       "dialogue":"How was the game?",
       "labelLeft": "Boring",
       "labelRight": "Good",
-      "reaction": "The End"
+      "reaction": ["The End", "The End"]
       }
   },
         {
     "credits": {
+      "layout": "scrollbar",
       "background": "rgba(94, 39, 18, 0.84)",
       "image": "flowers.jpg",
       "song": "null",

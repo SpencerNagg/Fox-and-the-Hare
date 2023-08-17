@@ -22,20 +22,19 @@ const encounterOrder = [
   'wolf', 'bear', 'bull',
 
   // Closing act
-  'sorrow', 'rooster', 'march', 'fight', 'end', 'credits'
+  'sorrow', 'rooster', 'march', 'fight', ['3encounter1', '3encounter2', '3encounter3'], ['ending1', 'ending2'], 'credits'
   ];
 
 let pageCounter = 0;
 
 let testGlobal = 0;
 
-// Run the first encounter (for testing purposes?)
-if (pageCounter == 0) {
-  populate(encounterOrder[pageCounter]);
-  pageCounter += 1;
-}
+// Run the first encounter
+populate(encounterOrder[pageCounter]);
 
 async function populate(encounter) {
+  // This function gets the json file the encounters are stored on
+  // then calls makeContent on it
   const requestURL = "encounters.json";
   const request = new Request(requestURL);
 
@@ -43,31 +42,138 @@ async function populate(encounter) {
   const data = await response.text();
 
   const dataJson = JSON.parse(data);
+
+  // Start loading content
   makeContent(dataJson, encounter)
 }
 
 function makeContent(data, encounter) {
+  // This function loads the materials shared for all encounters
+  // then checks the layout type for the encounter and calls
+  // either scrollLayout or buttonLayout to do the rest
+  
   console.log('testGlobal:', testGlobal);
   let encounterData = getByKey(data, encounter);
-  
-  let song = new Audio(`sound/${encounterData['song']}`);
-  song.loop = true;
-  song.play();
 
   // Fill in content
   body.style.backgroundColor = encounterData['background'];
 
   context.textContent = encounterData['context'];
   disscussion.textContent = encounterData['dialogue'];
-  labelLeft.textContent = encounterData['labelLeft'];
-  labelRight.textContent = encounterData['labelRight'];
-  reaction.textContent = encounterData['reaction'];
-  reaction.style.visibility = 'hidden';
-
   image.src = `images/${encounterData['image']}`
   imageDesktop.src = `images/${encounterData['image']}`
+  reaction.textContent = 'empty string to avoid a shift upon buttonpress';
+  reaction.style.visibility = 'hidden';
 
-  // -------- Button workings----------
+  if (encounterData['layout'] == 'scrollbar') {
+    scrollLayout(encounterData)
+  } else {
+    buttonLayout(encounterData)
+  }
+  // Move back to top of page
+  scroll(0, 0)
+}
+
+function buttonLayout(encounterData) {
+  let song = new Audio(`sound/${encounterData['song']}`);
+  song.loop = true;
+  song.play();
+
+  let choice;
+  let buttonPressed;
+
+  slider.style.display = 'none';
+
+  // Apply different CSS
+  buttonContainer.className = 'multiButtonContainer';
+
+  // Create left button
+  const leftButton = document.createElement("button");
+  leftButton.textContent = encounterData['labelLeft'];
+  leftButton.className = "button";
+  leftButton.id = "leftButton";
+  leftButton.addEventListener('click', () => {
+    buttonPressed = true;
+    // Scroll to the bottom of the screen
+    scrollTo(0, document.body.scrollHeight);
+    choice = 'left';
+
+    reaction.textContent = encounterData['reaction'][0];
+    // Make reaction visible again
+    reaction.style.visibility = 'revert';
+    leftButton.remove();
+    rightButton.remove();
+
+    // Revert the css to slidebar layout
+    buttonContainer.className = 'buttonContainer'
+    }
+  )
+  buttonContainer.append(leftButton);
+
+  // Create right button
+  const rightButton = document.createElement("button");
+  rightButton.textContent = encounterData['labelRight'];
+  rightButton.className = "button";
+  rightButton.id = "rightButton";
+  rightButton.addEventListener('click', () => {
+    buttonPressed = true;
+    // Scroll to the bottom of the screen
+    scrollTo(0, document.body.scrollHeight);
+    choice = 'right';
+    reaction.textContent = encounterData['reaction'][1];
+    // Make reaction visible again
+    reaction.style.visibility = 'revert';
+    leftButton.remove();
+    rightButton.remove();
+
+    // Revert the css to slidebar layout
+    buttonContainer.className = 'buttonContainer'
+    }
+  )
+  buttonContainer.append(rightButton);
+
+  // Create "Continue" button
+  const continueButton = document.createElement("button");
+  continueButton.textContent = "Continue";
+  continueButton.className = "button";
+  continueButton.id = "continue";
+
+  // --------- Reset stuff and create next encounter upon continue----------
+  continueButton.addEventListener('click', () => {
+    if (buttonPressed) {
+      buttonPressed = false;
+      song.pause();
+
+      slider.style.display = 'initial';
+
+      // Reset the slider to the middle
+      slider.value = "0";
+      
+      continueButton.remove();
+
+      pageCounter += 1;
+
+      // Load the next encounter
+      runNext(encounterOrder, pageCounter);
+    }
+  })
+  buttonContainer.append(continueButton);
+
+  // Do logic needed for the choice variable to effect something
+}
+
+function scrollLayout(encounterData) {
+  let song = new Audio(`sound/${encounterData['song']}`);
+  song.loop = true;
+  song.play();
+
+  // Apply different CSS
+  buttonContainer.className = 'buttonContainer';
+
+  labelLeft.textContent = encounterData['labelLeft'];
+  labelRight.textContent = encounterData['labelRight'];
+
+  // Create Confirm and Continue buttons
   const continueButton = document.createElement("button");
   continueButton.textContent = "Continue";
   continueButton.className = "button";
@@ -76,39 +182,87 @@ function makeContent(data, encounter) {
   confirmButton.textContent = "Confirm";
   confirmButton.className = "button";
 
-  // Add the confirm button
+  // -------- Confirm choice ------------
   buttonContainer.append(confirmButton);
   confirmButton.addEventListener('click', () => {
+    // Scroll to the bottom of the screen
+    scrollTo(0, document.body.scrollHeight);
+    
+    // Show reaction based on slider value
+    let answer = Number(slider.value);
 
-    testGlobal += Number(slider.value);
-    reaction.style.visibility = 'inherit';
+    // Update globals
+    testGlobal += answer;
+    reaction.style.visibility = 'revert';
+    if (answer > 0) {
+      reaction.textContent = encounterData['reaction'][0];
+    } else {
+      reaction.textContent = encounterData['reaction'][1];
+    }
 
     // Remove the confirm button and add in the continue button
     confirmButton.remove();
     buttonContainer.append(continueButton);
-
-    // Scroll to the bottom
-    scrollTo(0, document.body.scrollHeight);
   })
 
+// --------- Reset stuff and create next encounter ----------
   continueButton.addEventListener('click', () => {
     song.pause();
+    
+    labelLeft.textContent = '';
+    labelRight.textContent = '';
 
     // Reset the slider to the middle
     slider.value = "0";
 
     continueButton.remove();
-    reaction.textContent = '';
-
-    // Load the next encounter
-    populate(encounterOrder[pageCounter]);
 
     // Move back to top of page
     scroll(0, 0)
-    
+
     pageCounter += 1;
+
+    // Load the next encounter
+    runNext(encounterOrder, pageCounter);
   })
 }
+
+
+
+function runNext (encounterOrder, pageCounter) {
+  let encounter = encounterOrder[pageCounter];
+  
+  // Branching event
+  if (Array.isArray(encounter)) {
+
+    console.log("its an array yep")
+    
+    // Determine length of branch then apply logic
+    if (encounter.length == 2) {
+      if (testGlobal >= 0) {
+        populate(encounter[0])
+      } else if (testGlobal < 0) {
+        populate(encounter[1])
+      }
+    } 
+
+    else if (encounter.length == 3) {
+        if (testGlobal >= 0.3) {
+        populate(encounter[0])
+      } else if (testGlobal < 0.3 && testGlobal >= -0.3) {
+        populate(encounter[1])
+      } else if (testGlobal < 0.3) {
+        populate(encounter[2])
+      }
+    }
+  }
+
+  // Normal non-branching event
+  else {
+    populate(encounterOrder[pageCounter])
+  };
+}
+
 
 function getByKey(arr, key) {
   const foundItem = arr.find(function(x) {

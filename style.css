@@ -91,7 +91,8 @@ img {
 	align-self: center;
 }
 
-/*-----------------------*/
+/*------------------------------*/
+/*Lower section of UI*/
 .grid-item-2 {
 	background-color: #e6e6e6;
 	border: solid 1.2px;
@@ -113,20 +114,21 @@ img {
 	grid-column: 1 / -1;
 }
 
-.label_right {
-	grid-column: 1;
-	justify-self: right;
+label {
 	padding-right: 15px;
 	padding-top: 3px;
 	grid-row: 2;
 }
 
+.label_right {
+	grid-column: 1;
+	justify-self: right;
+
+}
+
 .label_left {
-	justify-self: left;
 	grid-column: 3;
-	padding-top: 3px;
-	padding-left: 15px;
-	grid-row: 2;
+	justify-self: left;
 }
 
 .slider {
@@ -144,6 +146,48 @@ img {
   justify-self: center;
   padding: 10px;
 }
+
+/*------------------------------------*/
+/*Multi-button layout*/
+.multiButtonContainer {
+	grid-column: 2;
+  grid-row: 6;
+  justify-self: center;
+  padding: 10px;
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+@media (min-width: 1088px) {
+	.multiButtonContainer {
+		grid-template-columns: repeat(3, 180px);
+	}
+}
+
+/*Align buttons for multi-button layout*/
+#continue {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+#leftButton, #rightButton {
+	grid-row: 1;
+	background-color: white;
+	border: solid .5px;
+	border-color: #00000082;
+}
+
+#leftButton {
+	grid-column: 1;
+}
+
+#rightButton {
+	grid-column: 3;
+}
+
 
 .button {
   width: 10vh;
