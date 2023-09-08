@@ -16,13 +16,14 @@ const slider = document.getElementById('slider');
 // Globals
 const encounterOrder = [
   // Opening
-  'onceUpon', 'melt',
+  'onceUpon', 'out',
 
   // Main section
-  'wolf', 'bear', 'bull',
+  'wolf', 'bear1', 'bear2', 'bear3', 'bull1', 'bull2', 'bull3', 'bull4',
 
-  // Closing act
-  'sorrow', 'rooster', 'march', 'fight', ['3encounter1', '3encounter2', '3encounter3'], ['ending1', 'ending2'], 'credits'
+  'sorrow', 'sorrow2', 'sorrow3', 'rooster', 'march', 'fight',
+
+  ['ending1', 'ending2', 'ending3', 'ending4'], 'credits'
   ];
 
 let pageCounter = 0;
@@ -238,23 +239,17 @@ function runNext (encounterOrder, pageCounter) {
     console.log("its an array yep")
     
     // Determine length of branch then apply logic
-    if (encounter.length == 2) {
-      if (testGlobal >= 0) {
+    if (encounter.length == 4) {
+      if (testGlobal <= -.50) {
         populate(encounter[0])
-      } else if (testGlobal < 0) {
+      } else if (testGlobal <= 1) {
         populate(encounter[1])
+      } else if (testGlobal <= .50) {
+        populate(encounter[2])
+      } else if (testGlobal > .50) {
+        populate(encounter[3])
       }
     } 
-
-    else if (encounter.length == 3) {
-        if (testGlobal >= 0.3) {
-        populate(encounter[0])
-      } else if (testGlobal < 0.3 && testGlobal >= -0.3) {
-        populate(encounter[1])
-      } else if (testGlobal < 0.3) {
-        populate(encounter[2])
-      }
-    }
   }
 
   // Normal non-branching event
@@ -263,6 +258,9 @@ function runNext (encounterOrder, pageCounter) {
   };
 }
 
+function blend(a, b, c) {
+  return a + (b - a) * (1.0 + c) / 2
+}
 
 function getByKey(arr, key) {
   const foundItem = arr.find(function(x) {

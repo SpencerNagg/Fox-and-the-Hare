@@ -1,82 +1,200 @@
 [ 
   {
     "onceUpon": {
-      "layout": "button",
+      "layout": "scrollbar",
       "background": "white",
       "image": "palace.webp",
       "song": "startwinter.mp3",
-      "context":"Once upon a time there lived a Fox and a Hare. \n The Fox had a house made of ice, and the Hare had a wooden hut.\nThe fox sat at her icy window and mocked the Hare:\n\"Silly Hare built himself such an ugly little hut! Nothing like my house, so beautiful, bright and clean! It's not just an ice house - it's a Crystal Palace!\"",
-      "dialogue":"this is the fialuge soutouhfouhfuh",
-      "labelLeft": "labelleft",
-      "labelRight": "labelRight",
-      "reaction": ["number1", "2222222222222"]
+      "context":"Once upon a time, a fox lived in a palace made of ice. As winter showed signs of thaw, Fox began eyeing Hare’s house in the field. It was cozy, with a flower opening outside and a warm fire inside.\nA week later Fox’s palace had disappeared as drips into the earth. She snuck up and knocked on his door with explanations swirling through her head. Hare sleepily opened an eye.",
+      "dialogue":"How fast does Hare answer the door?",
+      "labelLeft": "Rushed",
+      "labelRight": "Slowly",
+      "reaction": ["reaction1", "reaction2"]
       }
   },
     {
-    "melt": {
+    "out": {
       "layout": "scrollbar",
       "background": "rgba(79, 66, 14, 0.27)",
       "image": "evicted.webp",
       "song": "null",
-      "context":"Then came spring. The Fox's palace melted.\n So the Fox decided to take the Hare's hut. One day, when the Hare was out of his house, the Fox came and took his home and did not let him back inside.",
+      "context":"The next day Fox crashed through the window and chased Hare out. Hare went walking through the woods with only a bag and some carrots. Soon a bush rustled and Wolf was licking his lips in the shadows. Hare kept walking and even when Wolf leaped out in front of him Hare kept looking down walking along so Wolf asked \"What’s bugging you Hare?\"\n(interact?) \"I’ve been kicked out of my own cozy place Wolf. Fox’s stupid ice palace melted so she stole mine.\"\n Tears rose in Wolf’s eyes and he started sniffling quickly then sobbing beside Hare.",
       "dialogue":"",
       "labelLeft": "",
       "labelRight": "",
-      "reaction": ["test reaction hi there test test test", "test reaction hi there test test test"]
+      "reaction": ["reaction1", "reaction2"]
       }
-  }
- , {
+  },
+  {
     "wolf": {
-      "layout": "button",
+      "layout": "scrollbar",
       "background": "rgba(83, 56, 44, 0.7)",
       "image": "wolf.webp",
       "song": "abitsad.ogg",
-      "context":"\"Hi there, Hare, why so sad? Why do you cry?\"\n\"Oh, how can I not be sad and not cry: I had a wooden hut and the Fox had an ice house. But then spring came, the fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"\n\"Oh just wait a minute,\" said the Wolf,\"I won't be myself if I can't chase the Fox out of your house!\"\n\"I doubt it, dear Wolf, she is holding on to my house fast.\"",
+      "context":"Soon Wolf’s tears turned to resolve and he dragged Hare and said \"Let’s kick her out – what an injustice has been inflicted on gentle Hare…\"\n Soon Hare joined in on the run and when they came upon the field Wolf sprinted the rest of the way up to the door which he knocked on until it opened and Hare saw him run away from Fox brandishing one of Hare’s world record carrot replicas \n\"Sorry Hare, maybe Bear could help you!...\"",
       "dialogue":"How to phrase your response?",
       "labelLeft": "Harsh",
       "labelRight": "Gentle",
       "reaction": ["The Hare said, \"Alright then let's go!\"", "thingy said, \"Alright then let's go!\""]
       }
   },
+
+
+
   {
-    "bear": {
-      "layout": "button",
+    "bear1": {
+      "layout": "scrollbar",
       "background": "rgba(59, 94, 69, 0.93)",
       "image": "bear.webp",
       "song": "bears_song.ogg",
-      "context":"The Bear said \"Why are so sad Hare?\" \n\"I had a wooden hut, and the Fox had an ice house. But then spring came, the fox's ice house melted, the water dried out, and she decided to move into my house and will not let me, the owner, in!\"\n\n\"Hmm, well let's go chase her out! I won't be myself if I can't chase the Fox out of your little house!\"\n\n\"No, dear Bear, I doubt it, she is holding on to my house fast. The Wolf tried to driver her out and couldn't, and so you too will fail!\"",
-      "dialogue":"How should you tell the bear he's gonna fail?",
+      "context":"Little did Hare know, he was entering into Bear’s area along the edge of a field. Bear looked up from his game of cards \n\"What’s bugging you Hare?\"\n\"Fox kicked me out of my house?\"\nTwirling the flower in his hair - Bear joked \n\"That’s crazy! Where’ll I get my flowers now?\"\n\"Idk Bear\" said the Hare, fiddling with a carrot.\nObserving Hare’s reaction Bear said \n\"alright Hare let’s just go and get it back for you\"\n\"Idk Bear, Wolf couldn’t even get the door open\"\n\"Don’t mind it Hare, we’ll find a way\" Bear began trotting over to Hare’s house, seeing his strength gave Hare some motivation to trot along beside him.",
+      "dialogue":"",
       "labelLeft": "leftside",
       "labelRight": "rightside",
-      "reaction": ["The bear said, \"A fox has never beaten a bear!\"", "The bear said, \"A fox has never beaten a bear!\""]
+      "reaction": ""
       }
   },
+    {
+    "bear2": {
+      "layout": "scrollbar",
+      "background": "rgba(59, 94, 69, 0.93)",
+      "image": "bear.webp",
+      "song": "bears_song.ogg",
+      "context":"Bear said \"I think what we try and do is tempt her out, trip her when she steps outside and I’ll get massive and scare her away.\"",
+      "dialogue":"How do you react to Bear’s plan? ",
+      "labelLeft": "Affirmatively",
+      "labelRight": "Hesitantly",
+      "reaction": ""
+      }
+  },
+    {
+    "bear3": {
+      "layout": "scrollbar",
+      "background": "rgba(59, 94, 69, 0.93)",
+      "image": "bear.webp",
+      "song": "bears_song.ogg",
+      "context":"\"alright go tempt her\"\n Bear shoved you in front of the door, tired, Hare walked up and knocked on the door. Quickly Fox opened and had a look on her face Hare found hard to read. Eventually she stepped out - and as Bear stuck his leg out to trip her she grabbed it then got on her hind legs and roared at Bear who running off into the woods yelled \"Maybe Bull can help you unlucky Hare!\" but wouldn’t look back, and soon the door was shut again with Hare outside alone.",
+      "dialogue":"Hare got up the strength to interact with Fox again, how loud does he knock?",
+      "labelLeft": "Quietly",
+      "labelRight": "Loudly",
+      "reaction": ["There was no response", "Hare heard a sigh from inside but even after knocking again got no response"]
+      }
+  },
+
+
+
   {
-    "bull": {
+    "bull1": {
       "layout": "scrollbar",
       "background": "rgba(38, 38, 79, 0.83)",
       "image": "bull.webp",
       "song": "3over4.ogg",
-      "context":"Then the Bull comes to the Hare \"Hi, Hare, why so sad? What are you crying about?\"\n\n\"The fox took my house.\"\n\n\"Oh, let's go chase her out\"\n\n\"No, dear Bull, we will not chase her out - she is holding on to my hosue fast. The Wolf tried and failed, the Bear tried and failed, and you will try and fail!\"\n\n\"I won't be myself if I cannot chase the Fox out of your house!\"",
-      "dialogue":"How enthusiastically should you follow the bull?",
-      "labelLeft": "Sloppily",
-      "labelRight": "With hope!",
-      "reaction": ["Yeah let's go!", "Yeah let's go!"]
+      "context":"Hare sees two big curious eyes peering at him in the darkness. \n\"Oh who's there...\"\n\"Hare, it's me Bull.\"\n\"I'll be living in a hole again soon dear Bull - where I'll have to scare the rabbits off each night and wash my clothes with puddle-water each day.\"\n\"Hare why would you scare off the rabbits? Being bigger doesn't mean you're right\"\n\"How odd Bull - how strange your words are to me... I'm in this mess because the fox is bigger and stronger! - and smarter and meaner than me.\"\nBull looked out into the darkness\n\"My heart's beats shake the grass beside my bed and my mouth could hold a fox and a half - yet I lose my wits with every step toward an adversary and left the herd because the valley's wolfs stared me in the eye... the trees...\"",
+      "dialogue":"How do you get a word in during Bull's speech?",
+      "labelLeft": "Cut him off",
+      "labelRight": "Nudge your way in",
+      "reaction": ["Bull stopped suddenly and listened.", "Gradually Bull slowed down and conversation continued."]
       }
   },
-      {
-    "sorrow": {
+    {
+    "bull2": {
       "layout": "scrollbar",
-      "background": "rgba(6, 1, 6, 0.85)",
-      "image": "crying.webp",
-      "song": "lonely_hare.ogg",
-      "context":"And the Hare was left crying in the field ...",
+      "background": "rgba(38, 38, 79, 0.83)",
+      "image": "bullride.jpeg",
+      "song": "",
+      "context":"Gradually Bull slowed down and conversation continued.\n\nHare continued, \"Your too gentle Bull, if you weren't so big you'd be pushed around.\"\n\"Come, I know where Fox lived before she took your place, and we can check out if you can take her place?\"\n\"Alright only if I can ride\"\n Hare got up on Bull's back and watched the evening sky (bullride.jpeg) through the treetops as they moved through the forest. He hummed an old lullaby too.\n\"Hmm, do you smell that Hare?\"\n\"The burntness? It started a bit ago\"\n\"Well either I can't find her old den or it got destroyed in a fire.\"\n\"Just come back to my house with me Bull and you I'll be able to chase her out.\"\nBull paused then answered \"Alright let's go then Hare, I am rather large\".\nHesitantly at first, then with confidence Bull galloped into the field with Hare's house and sitting on Bull's back Hare could appreciate the air running by from running.",
       "dialogue":"",
       "labelLeft": "",
       "labelRight": "",
       "reaction": ""
       }
   },
+    {
+    "bull3": {
+      "layout": "scrollbar",
+      "background": "rgba(38, 38, 79, 0.83)",
+      "image": "bull.webp",
+      "song": "3over4.ogg",
+      "context":"They arrived at the house.\n\"Can you knock Hare? Then I'll ch-che-charge in\"\nHare held Bull's gaze skeptically, then felt his own fear and resistance growing up in his chest.",
+      "dialogue":"How should you ask Bull to stand beside you?",
+      "labelLeft": "Suggest it",
+      "labelRight": "Require it",
+      "reaction": ""
+      }
+  },
+    {
+    "bull4": {
+      "layout": "scrollbar",
+      "background": "rgba(38, 38, 79, 0.83)",
+      "image": "bull.webp",
+      "song": "3over4.ogg",
+      "context":"They arrived at the house.\n\"Can you knock Hare? Then I'll ch-che-charge in\"\nHare held Bull's gaze skeptically, then felt his own fear and resistance growing up in his chest. He came up beside you and you knocked. There was no response. No response again. Really loud knock this time and still no response.",
+      "dialogue":"How long do you wait before knocking again?",
+      "labelLeft": "10 seconds",
+      "labelRight": "1 minute",
+      "reaction": ""
+      }
+  },
+     {
+    "bull5": {
+      "layout": "scrollbar",
+      "background": "rgba(38, 38, 79, 0.83)",
+      "image": "bull.webp",
+      "song": "3over4.ogg",
+      "context":"They arrived at the house.\n\"Can you knock Hare? Then I'll ch-che-charge in\" Hare held Bull's gaze skeptically, then felt his own fear and resistance growing up in his chest. He came up beside you and you knocked. There was no response. No response again. Really loud knock this time and still no response.Bull stuck his head to the window and intentionally or unintentionally broke through. After a few seconds he said into the house \n\"Hello?\"\nFox's voice came out \"Bull, are you working for Hare?\"\n\"Umm...\"\n\"Can I talk to him?\"\n\"Let me ask\"\nHare was shaking his head.\nSilence continued and then the light inside turned off. Bull said \"Let's give up\".",
+      "dialogue":"Does Hare agree?",
+      "labelLeft": "Yes",
+      "labelRight": "No",
+      "reaction": ""
+      }
+  },
+
+
+
+      {
+    "sorrow": {
+      "layout": "scrollbar",
+      "background": "rgba(6, 1, 6, 0.85)",
+      "image": "crying.webp",
+      "song": "lonely_hare.ogg",
+      "context":"And on a hill in a field, the Hare was left crying:\n\n“How is this fair? I had everything… now just a sack filled with socks (even if it gives fuller support than my real pillow). Why’d I let Bull get away with cheating? I’ll need to be sharper out here.”",
+      "dialogue":"How hard is Hare on himself about the wolf thing?",
+      "labelLeft": "Chill",
+      "labelRight": "Upset",
+      "reaction": ["Whatever - maybe I should say sorry", "I should avoid him"]
+      }
+
+  },
+        {
+    "sorrow2": {
+      "layout": "scrollbar",
+      "background": "rgba(6, 1, 6, 0.85)",
+      "image": "crying.webp",
+      "song": "lonely_hare.ogg",
+      "context":"And on a hill in a field, the Hare was left crying:\n\n“How is this fair? I had everything… now just a sack filled with socks (even if it gives fuller support than my real pillow). Why’d I let Bull get away with cheating? I’ll need to be sharper out here.”",
+      "dialogue":"What does Hare think about Bear’s antics?",
+      "labelLeft": "Frusturated",
+      "labelRight": "Laughs",
+      "reaction": ["I’ll ask him if he knows where I can find a new place", "I’ll ask him how he can brush things off like that"]
+      }
+      
+  },
+        {
+    "sorrow3": {
+      "layout": "scrollbar",
+      "background": "rgba(6, 1, 6, 0.85)",
+      "image": "crying.webp",
+      "song": "lonely_hare.ogg",
+      "context":"And on a hill in a field, the Hare was left crying:\n\n“How is this fair? I had everything… now just a sack filled with socks (even if it gives fuller support than my real pillow). Why’d I let Bull get away with cheating? I’ll need to be sharper out here.”",
+      "dialogue":"Why is Hare sad?",
+      "labelLeft": "Scared",
+      "labelRight": "Insulted",
+      "reaction": ""
+      }
+  },
+
+
+
       {
     "rooster": {
       "layout": "scrollbar",
@@ -116,90 +234,56 @@
       "reaction": ""
       }
   },
-
-
-          {
-    "3encounter1": {
-      "layout": "scrollbar",
-      "background": "yellow",
-      "image": "",
-      "song": "",
-      "context":"1/3",
-      "dialogue":"",
-      "labelLeft": "",
-      "labelRight": "",
-      "reaction": ""
-      }
-  },
-          {
-    "3encounter2": {
-      "layout": "scrollbar",
-      "background": "green",
-      "image": "",
-      "song": "",
-      "context":"2/3",
-      "dialogue":"",
-      "labelLeft": "",
-      "labelRight": "",
-      "reaction": ""
-      }
-  },
-          {
-    "3encounter3": {
-      "layout": "scrollbar",
-      "background": "red",
-      "image": "",
-      "song": "",
-      "context":"3/3",
-      "dialogue":"",
-      "labelLeft": "",
-      "labelRight": "",
-      "reaction": ""
-      }
-  },
-
-
-
         {
     "ending1": {
       "layout": "scrollbar",
-      "background": "rgba(79, 66, 14, 0.27)",
-      "image": "palace.webp",
+      "background": "blue",
+      "image": "",
       "song": "",
-      "context":"First ending",
+      "context":"Hare glanced out the window on the stormy next day. Droplets of rain shook, caught on a spiderweb. They reflected a quiet mix of grey white and brown. The flower was dropping so you couldn’t see its color.\nHare felt a bit of the loneliness he’d felt on the hill, but was happy to be back home. He wondered what Rooster and Fox were doing now…",
       "dialogue":"",
       "labelLeft": "",
       "labelRight": "",
       "reaction": ""
       }
   },
-        {
+          {
     "ending2": {
-      "layout": "scrollbar",
-      "background": "rgba(79, 66, 14, 0.27)",
-      "image": "wolf.webp",
+      "layout":"scrollbar",
+      "background": "rgba(94, 39, 18, 0.84)",
+      "image": "",
       "song": "",
-      "context":"Second ending",
+      "context":"Hare glanced out the window on the quiet but rainy next day. The flower still held some of its color, which made Hare happy.\nMaybe Hare will visit Fox and ask for help repairing the house, because it’s trashed.",
       "dialogue":"",
       "labelLeft": "",
       "labelRight": "",
       "reaction": ""
       }
   },
-
-
-
-        {
-    "end": {
+          {
+    "ending3": {
+      "layout": "pscrollbar",
+      "background": "rgba(94, 39, 18, 0.84)",
+      "image": "",
+      "song": "",
+      "context":"ending3",
+      "dialogue":"The flower managed to turn itself up to the sky, and it was the last thing Hare glanced at before following Rooster into the forest.",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
+      }
+  },
+          {
+    "ending4": {
       "layout": "scrollbar",
       "background": "rgba(94, 39, 18, 0.84)",
-      "image": "ever_after.webp",
-      "song": "null",
-      "context":"The Fox got scared and ran off.\n\nFrom then on, the Rooster and the Hare lived together in their cozy wooden hut.",
-      "dialogue":"How was the game?",
-      "labelLeft": "Boring",
-      "labelRight": "Good",
-      "reaction": ["The End", "The End"]
+      "image": "",
+      "song": "",
+      "context":"ending4",
+      "dialogue":"However it feels to be a flower in full bloom on a mild sunny day, Hare must have felt the equivalent of that sitting on the steps to the house as Rooster moved in.",
+      "labelLeft": "",
+      "labelRight": "",
+      "reaction": ""
       }
   },
         {
